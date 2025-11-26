@@ -46,6 +46,14 @@ _coming soon_
 
 _coming soon_
 
+#### sorting
++------------+-----------+-----------+-----------+--------+--------+----------------------------------------+
+| Algorithm  | Best      | Average   | Worst     | Space  | Stable | Description                            |
++------------+-----------+-----------+-----------+--------+--------+----------------------------------------+
+| BubbleSort | O(n)      | O(n^2)    | O(n^2)    | O(1)   | Yes    | Bubbles the larget value to the top.   |
+|            |           |           |           |        |        | Stops early for sorted vectors.        |
++------------+-----------+-----------+-----------+--------+--------+----------------------------------------+
+
 ### Design patterns
 
 _coming soon_
