@@ -1,4 +1,4 @@
-// tests/run_stability_trials.h
+// test_content/run_stability_trials.h
 #pragma once
 
 #include <algorithm>
@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "stable_item.h"
+#include "terminal_colors.h"
 
 template <template <typename> class Sorter>
 bool run_stability_trials(std::size_t trials, std::mt19937 &rng) {
@@ -37,10 +38,13 @@ bool run_stability_trials(std::size_t trials, std::mt19937 &rng) {
         }
     }
 
+    const char *color = all_stable ? COLOR_GREEN : COLOR_RED;
+    const char *text = all_stable ? "PASS" : "FAIL";
+
     std::cout << "Stability test ("
               << trials
               << " random trials vs std::stable_sort): "
-              << (all_stable ? "PASS" : "FAIL")
+              << color << text << COLOR_RESET
               << "\n";
 
     return all_stable;
