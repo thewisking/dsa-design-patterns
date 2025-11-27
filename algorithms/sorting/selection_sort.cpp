@@ -14,11 +14,13 @@ void SelectionSort<T>::sort(std::vector<T> &data) const {
     for (std::size_t i = 0; i < size; i++) {
         currentMin = i;
         for (std::size_t j = i; j < size; j++) {
-            if (data[j] > data[currentMin]) {
+            if (data[j] < data[currentMin]) {
                 currentMin = j;
             }
         }
+        auto temp = data[i];
         data[i] = data[currentMin];
+        data[currentMin] = temp;
     }
     return;
 }
