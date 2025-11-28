@@ -9,7 +9,7 @@ void CountingSort<T>::sort(std::vector<T> &data) const {
     T minValue = data[0];
     T maxValue = minValue;
 
-    for (T x : data) {
+    for (const T& x : data) {
         if (x > maxValue) {
             maxValue = x;
         } else if (x < minValue) {
@@ -20,7 +20,7 @@ void CountingSort<T>::sort(std::vector<T> &data) const {
     size_t range = static_cast<size_t>(maxValue - minValue + 1);
     std::vector<size_t> count(range, 0);
 
-    for (T x : data) {
+    for (const T& x : data) {
         ++count[static_cast<size_t>(x - minValue)];
     }
 
