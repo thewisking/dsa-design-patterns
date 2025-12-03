@@ -293,7 +293,7 @@ class SinglyLinkedList {
 
     // search
     std::size_t find(const T &value) const {
-        auto *currentNode = m_head;
+        const auto *currentNode = m_head;
         std::size_t index = 0;
 
         while (currentNode != nullptr) {
