@@ -1,8 +1,8 @@
-#include "binary_tree.h"
+#include "binary_search_tree.h"
 #include <iostream>
 
 int main() {
-    BinaryTree tree;
+    BinarySearchTree tree;
 
     tree.insert(5);
     tree.insert(3);

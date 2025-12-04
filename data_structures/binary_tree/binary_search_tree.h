@@ -3,7 +3,7 @@
 #include "tree_node.h"
 #include <iostream>
 
-class BinaryTree {
+class BinarySearchTree {
   private:
     TreeNode *m_root;
 
@@ -55,9 +55,9 @@ class BinaryTree {
     }
 
   public:
-    BinaryTree() : m_root(nullptr) {}
+    BinarySearchTree() : m_root(nullptr) {}
 
-    ~BinaryTree() { clear(m_root); }
+    ~BinarySearchTree() { clear(m_root); }
 
     void insert(int value) { insert_impl(m_root, value); }
 
