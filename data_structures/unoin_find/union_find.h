@@ -3,6 +3,7 @@
 #include <cstddef>
 #include <stdexcept>
 #include <vector>
+#include <utility>
 
 class UnionFind {
   public:
