@@ -2,8 +2,8 @@
 
 #include <cstddef>
 #include <stdexcept>
-#include <vector>
 #include <utility>
+#include <vector>
 
 class UnionFind {
   public:
@@ -62,5 +62,8 @@ class UnionFind {
     }
 
     bool connected(Index a, Index b) { return find(a) == find(b); }
-    std::size_t set_size(Index x) { return m_size[find(x)]; }
+    std::size_t set_size(Index x) {
+        check_index(x);
+        return m_size[find(x)];
+    }
 };
